@@ -1,0 +1,11 @@
+.box-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 10px;
+  background-color: whitesmoke;
+  border-radius: 3px;
+}
+
