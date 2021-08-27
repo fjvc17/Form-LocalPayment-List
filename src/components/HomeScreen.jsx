@@ -11,11 +11,12 @@ const { Group } = Radio;
 const HomeScreen = () => {
 
   const [prescription, setPrescription] = useState(false)
-
+const [shouldLoad, setShouldLoad] = useState(0)
   const [foodData, setFoodData] = useState([])
 
 
   const [data, setData] = useState(null);
+
 
   const [form] = Form.useForm();
 
@@ -35,8 +36,9 @@ const HomeScreen = () => {
     }
     getData();
 
-  }, [prescription]);
+  }, [shouldLoad]);
 
+  // console.log(data)
 
   const formItemLayout = {
     labelCol: {
@@ -59,6 +61,7 @@ const HomeScreen = () => {
 
   const handleFinish = (values) => {
     setFoodData(foodData.concat({...values, date: new Date().toISOString()}) )
+    setShouldLoad(shouldLoad + 1)
     setPrescription(true)
     console.log('Formulario completo: ', values);
   };
@@ -192,7 +195,7 @@ const HomeScreen = () => {
            
 
             {
-              prescription?
+              prescription && data.drinks ?
               <Prescription data={data} />
               : null
             }

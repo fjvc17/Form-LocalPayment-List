@@ -7,8 +7,8 @@ import '../styles/prescription.css'
 
 
 export const Prescription = ({data}) => {
+  return data.drinks ? (
 
-  return (
     <div className="prescrip">
       <Image
         width={200}
@@ -26,5 +26,6 @@ export const Prescription = ({data}) => {
       </div>
       <hr />
     </div>
-  )
+  ) : null
 }
+ 
