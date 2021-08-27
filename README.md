@@ -4,7 +4,7 @@ this is an Front-End test on how to fill a clinical form, it has a login page, r
 clinical form.
 
 # Run the application
-to run it clone the repository and open the terminal and `npm start` the file or view the final work by copying the link from here: [clinic-form-site.netlify.app](clinic-form-site.netlify.app)
+to run it clone the repository and open the terminal and `npm start` the file or view the final work by copying the link from here: [clinic-form-site.netlify.app](clinic-form-site.netlify.app) and paste it into the browser
 
 # step 1
 starts at the login page, go to register to create an account.
