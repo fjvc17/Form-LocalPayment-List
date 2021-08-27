@@ -59,13 +59,9 @@ const HomeScreen = () => {
 
   const handleFinish = (values) => {
     setFoodData(foodData.concat({...values, date: new Date().toISOString()}) )
+    setPrescription(true)
     console.log('Formulario completo: ', values);
   };
-
-  const showPrescription = () => {
-    setPrescription(true)
-  }
-
 
 
   return (
@@ -202,7 +198,7 @@ const HomeScreen = () => {
             }
 
             <div className="btn-register">
-              <Button onClick={showPrescription} type="primary" htmlType="submit">
+              <Button type="primary" htmlType="submit">
                 Guardar
               </Button>
               &nbsp;&nbsp;&nbsp;
